@@ -1,0 +1,22 @@
+<!-- As usual ypu have to start with basic html tags -->
+<html>
+<head>
+    <!-- title of page -->
+    <title>Dynamic bg color change</title>
+</head>
+<body id="bgSetup">
+    <!-- start with red(#ff0000) color its a color palette box-->
+    <!-- now we setup a function whenever we change color background color will change-->
+    <input type="color" id="colour" value="#ff0000" onchange="changeColour();"/>
+    <!-- now we are using inline javascript-->
+    <script>
+        function changeColour(){
+            // use the id refference to get color value
+            var colorVal = document.getElementById("colour").value ;
+            // use body ID to change background color
+            document.getElementById("bgSetup").style.backgroundColor = colorVal ;
+        }
+    </script>
+</body>
+
+</html>
